@@ -11,7 +11,7 @@ export class AppHome extends LitElement {
 
   // For more information on using properties and state in lit
   // check out this link https://lit.dev/docs/components/properties/
-  @property() message = 'Welcome!';
+  @property() message = 'Welcome to my personal page!';
 
   static get styles() {
     return [
@@ -86,53 +86,45 @@ export class AppHome extends LitElement {
             <div slot="header">
               <h2>${this.message}</h2>
             </div>
-
+            <img src="src/pages/makar.jpg" alt="Main photo" style="width:200px">
             <p>
-              For more information on the PWABuilder pwa-starter, check out the
-              <a href="https://docs.pwabuilder.com/#/starter/quick-start">
-                documentation</a>.
+              Deal with development of ml-based technologies from researches and prototyping
+              to a ready-to-use inference implementation. Most interested in computer vision, ML OPS and system design.
+              Inspiring by design and building large systems for ETL, model training and evaluation.
+              And I always get special pleasure when someone really needs a result.
             </p>
-
-            <p id="mainInfo">
-              Welcome to the
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              pwa-starter! Be sure to head back to
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              when you are ready to ship this PWA to the Microsoft Store, Google Play
-              and the Apple App Store!
+            <p>
+              Graduated from MIREA with honors as BSc and MSc. My master's thesis was about assembling prototype of autonomous
+              quadrocoter with navigation system based on computer vision and about researching how control system based on a
+              fuzzy logic can improve flight capabilities in an unstable environment (wind or oscillating weight).
+            </p>
+            <p>
+              In my spare time I enjoy windsurfing and diving.
             </p>
 
             ${'share' in navigator
-              ? html`<sl-button slot="footer" variant="primary" @click="${this.share}">Share this Starter!</sl-button>`
+              ? html`<sl-button slot="footer" variant="primary" @click="${this.share}">Share this page</sl-button>`
               : null}
           </sl-card>
 
           <sl-card id="infoCard">
-            <h2>Technology Used</h2>
+            <h2>Contacts</h2>
 
             <ul>
               <li>
-                <a href="https://www.typescriptlang.org/">TypeScript</a>
+                <a href="https://www.linkedin.com/in/makariy-vasyuta/">linkedin</a>
               </li>
 
               <li>
-                <a href="https://lit.dev">lit</a>
-              </li>
-
-              <li>
-                <a href="https://shoelace.style/">Shoelace</a>
-              </li>
-
-              <li>
-                <a href="https://vaadin.github.io/vaadin-router/vaadin-router/demo/#vaadin-router-getting-started-demos"
-                  >Vaadin Router</a>
+                <a href="https://www.instagram.com/?hl=en">instagram</a>
               </li>
             </ul>
           </sl-card>
 
-          <sl-button href="${(import.meta as any).env.BASE_URL}about" variant="primary">Navigate to About</sl-button>
+
         </div>
       </main>
     `;
+    //<sl-button href="${(import.meta as any).env.BASE_URL}about" variant="primary">Navigate to About</sl-button>
   }
 }
