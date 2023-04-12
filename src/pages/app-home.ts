@@ -60,6 +60,7 @@ export class AppHome extends LitElement {
     super();
   }
 
+
   async firstUpdated() {
     // this method is a lifecycle even in lit
     // for more info check out the lit docs https://lit.dev/docs/components/lifecycle/
@@ -77,6 +78,7 @@ export class AppHome extends LitElement {
   }
 
   render() {
+    const imgUrl = new URL('./img.png', import.meta.url).href
     return html`
       <app-header></app-header>
 
@@ -86,7 +88,7 @@ export class AppHome extends LitElement {
             <div slot="header">
               <h2>${this.message}</h2>
             </div>
-            <img src="src/pages/makar.jpg" alt="Main photo" style="width:200px">
+            <img src="${imgUrl}" alt="Main photo" style="width:200px">
             <p>
               Deal with development of ml-based technologies from researches and prototyping
               to a ready-to-use inference implementation. Most interested in computer vision, ML OPS and system design.
